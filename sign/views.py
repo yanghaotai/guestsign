@@ -55,7 +55,7 @@ def event_manage(request):
 # 发布会名称搜索
 @login_required
 def search_name(request):
-    username = request.session.get('username', '')
+    username = request.session.get('user', '')
     search_name = request.GET.get("name", "")
     # search_name_bytes = search_name.encode(encoding="utf-8")
     # event_list = Event.objects.filter(name__contains=search_name_bytes)
@@ -88,7 +88,7 @@ def guest_manage(request):
 # 嘉宾手机号的查询
 @login_required
 def search_phone(request):
-    username = request.session.get('username', '')
+    username = request.session.get('user', '')
     search_phone = request.GET.get("phone", "")
     search_name_bytes = search_phone.encode("utf-8")
     guest_list = Guest.objects.filter(phone__contains=search_name_bytes)
