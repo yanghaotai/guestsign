@@ -90,10 +90,10 @@ def guest_manage(request):
 def search_phone(request):
     username = request.session.get('username', '')
     search_phone = request.GET.get("phone", "")
-    search_name_bytes = search_phone.encode(encoding="utf-8")
+    search_name_bytes = search_phone.encode("utf-8")
     guest_list = Guest.objects.filter(phone__contains=search_name_bytes)
 
-    paginator = Paginator(guest_list, 10)
+    paginator = Paginator(guest_list, 5)
     page = request.GET.get('page')
     try:
         contacts = paginator.page(page)
