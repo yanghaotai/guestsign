@@ -93,6 +93,8 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': '123456',
         'OPTIONS': {
+            'isolation_level': None,
+            'autocommit': True,
             'init_command': "SET sql_mode='NO_ENGINE_SUBSTITUTION,NO_AUTO_CREATE_USER'",
         },
     }
