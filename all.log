@@ -1,0 +1,222 @@
+[2017-04-10 16:26:56,227] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2017-04-10 16:26:56,227] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2017-04-10 16:26:56,403] [WARNING] basehttp : "GET /favicon.ico HTTP/1.1" 404 3478
+[2017-04-10 16:26:56,403] [WARNING] basehttp : "GET /favicon.ico HTTP/1.1" 404 3478
+[2017-04-10 16:27:19,726] [INFO] basehttp : "GET /?username=111 HTTP/1.1" 200 1471
+[2017-04-10 16:27:19,726] [INFO] basehttp : "GET /?username=111 HTTP/1.1" 200 1471
+[2017-04-10 16:27:29,089] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 302 0
+[2017-04-10 16:27:29,089] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 302 0
+[2017-04-10 16:27:29,139] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 6491
+[2017-04-10 16:27:29,139] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 6491
+[2018-09-03 21:15:19,839] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-03 21:15:19,839] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-03 21:15:23,563] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 200 1498
+[2018-09-03 21:15:23,563] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 200 1498
+[2018-09-03 21:17:39,228] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-03 21:17:39,228] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-03 21:17:42,171] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 200 1498
+[2018-09-03 21:17:42,171] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 200 1498
+[2018-09-04 10:19:11,160] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-04 10:19:11,160] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-04 10:19:14,703] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 200 1498
+[2018-09-04 10:19:14,703] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 200 1498
+[2018-09-04 10:35:43,065] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-04 10:35:43,065] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-04 10:35:43,828] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-04 10:35:43,828] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-04 10:35:50,530] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-04 10:35:50,530] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-04 10:35:52,565] [ERROR] exception : Internal Server Error: /login_action/
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'guest_dev.auth_user' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\guest-master\sign\views.py", line 28, in login_action
+    user = auth.authenticate(username = username, password = password)
+  File "D:\python\lib\site-packages\django\contrib\auth\__init__.py", line 70, in authenticate
+    user = _authenticate_with_backend(backend, backend_path, request, credentials)
+  File "D:\python\lib\site-packages\django\contrib\auth\__init__.py", line 116, in _authenticate_with_backend
+    return backend.authenticate(*args, **credentials)
+  File "D:\python\lib\site-packages\django\contrib\auth\backends.py", line 16, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "D:\python\lib\site-packages\django\contrib\auth\base_user.py", line 44, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 397, in get
+    num = len(clone)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 254, in __len__
+    self._fetch_all()
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "D:\python\lib\site-packages\django\db\models\sql\compiler.py", line 1066, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'guest_dev.auth_user' doesn't exist")
+[2018-09-04 10:35:52,565] [ERROR] exception : Internal Server Error: /login_action/
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'guest_dev.auth_user' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\guest-master\sign\views.py", line 28, in login_action
+    user = auth.authenticate(username = username, password = password)
+  File "D:\python\lib\site-packages\django\contrib\auth\__init__.py", line 70, in authenticate
+    user = _authenticate_with_backend(backend, backend_path, request, credentials)
+  File "D:\python\lib\site-packages\django\contrib\auth\__init__.py", line 116, in _authenticate_with_backend
+    return backend.authenticate(*args, **credentials)
+  File "D:\python\lib\site-packages\django\contrib\auth\backends.py", line 16, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "D:\python\lib\site-packages\django\contrib\auth\base_user.py", line 44, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "D:\python\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 397, in get
+    num = len(clone)
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 254, in __len__
+    self._fetch_all()
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\python\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "D:\python\lib\site-packages\django\db\models\sql\compiler.py", line 1066, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\python\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\python\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "D:\python\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "D:\python\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'guest_dev.auth_user' doesn't exist")
+[2018-09-04 10:35:52,756] [ERROR] basehttp : "POST /login_action/ HTTP/1.1" 500 218361
+[2018-09-04 10:35:52,756] [ERROR] basehttp : "POST /login_action/ HTTP/1.1" 500 218361
+[2018-09-04 10:36:55,155] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-04 10:36:55,155] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-04 10:36:57,731] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 200 1498
+[2018-09-04 10:36:57,731] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 200 1498
+[2018-09-04 10:40:39,633] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-04 10:40:39,633] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-04 10:40:46,548] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 302 0
+[2018-09-04 10:40:46,548] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 302 0
+[2018-09-04 10:40:46,568] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 3120
+[2018-09-04 10:40:46,568] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 3120
+[2018-09-04 10:41:08,678] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 302 0
+[2018-09-04 10:41:08,678] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 302 0
+[2018-09-04 10:41:08,694] [INFO] basehttp : "GET /accounts/login/?next=/event_manage/ HTTP/1.1" 200 1471
+[2018-09-04 10:41:08,694] [INFO] basehttp : "GET /accounts/login/?next=/event_manage/ HTTP/1.1" 200 1471
+[2018-09-04 10:41:08,909] [WARNING] basehttp : "GET /favicon.ico HTTP/1.1" 404 3515
+[2018-09-04 10:41:08,909] [WARNING] basehttp : "GET /favicon.ico HTTP/1.1" 404 3515
+[2018-09-04 10:41:18,820] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 302 0
+[2018-09-04 10:41:18,820] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 302 0
+[2018-09-04 10:41:18,855] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 3120
+[2018-09-04 10:41:18,855] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 3120
