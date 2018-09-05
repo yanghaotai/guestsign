@@ -141,7 +141,7 @@ def qrcodeWithText(text):
     img.show()
 
 
-# 二维码签到页面##
+# 二维码签到页面
 def sign_index3(request,event_id):
     event_name = get_object_or_404(Event, id=event_id)
     return render(request, 'sign_index3.html',{'eventId': event_id,
