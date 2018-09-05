@@ -6,6 +6,7 @@ from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 import logging
+import qrcode
 
 logger = logging.getLogger(__name__)
 
@@ -131,6 +132,23 @@ def sign_index2(request,event_id):
     event_name = get_object_or_404(Event, id=event_id)
     return render(request, 'sign_index2.html',{'eventId': event_id,
                                                'eventNanme': event_name})
+
+ #生成二维码
+def qrcodeWithText(text):
+    img=qrcode.make(text) #保存图片
+    savePath='2.png'
+    img.save(savePath)
+    img.show()
+
+# 二维码签到页面
+def sign_index3(request,event_id):
+    event_name = get_object_or_404(Event, id=event_id)
+    return render(request, 'sign_index3.html',{'eventId': event_id,
+                                               'eventNanme': event_name,'qrcode':qrcodeWithText('http://118.24.90.64:8014/sign_index/'+str(event_id))})
+
+
+
+
 
 
 # 签到动作

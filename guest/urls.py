@@ -31,6 +31,7 @@ urlpatterns = [
     url(r'^search_phone/$', views.search_phone),
     url(r'^sign_index/(?P<event_id>[0-9]+)/$', views.sign_index),
     url(r'^sign_index2/(?P<event_id>[0-9]+)/$', views.sign_index2),
+    url(r'^sign_index3/(?P<event_id>[0-9]+)/$', views.sign_index3),
     url(r'^sign_index_action/(?P<event_id>[0-9]+)/$', views.sign_index_action),
     url(r'^api/', include('sign.urls')),
 ]

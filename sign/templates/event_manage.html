@@ -46,6 +46,7 @@
                 <th>时间</th>
                 <th style="width: 45px;">签到</th>
                 <th>签到正式</th>
+                <th>二维码签到</th>
               </tr>
             </thead>
             <tbody>
@@ -58,6 +59,7 @@
                   <td>{{ event.start_time }}</td>
                   <td><a href="/sign_index/{{ event.id }}/"  target="{{ event.id }}_blank">sign</a></td>
                   <td><a href="/sign_index2/{{ event.id }}/"  target="{{ event.id }}_blank">sign_web</a></td>
+                  <td><a href="/sign_index3/{{ event.id }}/"  target="{{ event.id }}_blank">sign_qr</a></td>
                 </tr>
              {% endfor %}
             </tbody>
