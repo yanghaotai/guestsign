@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 import logging
 import qrcode
+import os
 
 logger = logging.getLogger(__name__)
 
@@ -136,9 +137,11 @@ def sign_index2(request,event_id):
  #生成二维码
 def qrcodeWithText(text):
     img=qrcode.make(text) #保存图片
-    savePath='2.png'
+    path = os.getcwd()
+    savePath = os.path.join(path,'sign/static/images/2.png')
+    # savePath='sign/static/images/2.png'
     img.save(savePath)
-    img.show()
+    # img.show()
 
 
 # 二维码签到页面

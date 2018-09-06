@@ -370,3 +370,165 @@ django.db.utils.ProgrammingError: (1146, "Table 'guest_dev.auth_user' doesn't ex
 [2018-09-05 18:53:54,738] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
 [2018-09-05 18:54:02,832] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 501
 [2018-09-05 18:54:02,832] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 501
+[2018-09-06 10:25:35,907] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-06 10:25:35,907] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-06 10:25:46,443] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 302 0
+[2018-09-06 10:25:46,443] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 302 0
+[2018-09-06 10:25:47,619] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 10:25:47,619] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 10:25:52,408] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 501
+[2018-09-06 10:25:52,408] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 501
+[2018-09-06 11:15:39,793] [INFO] basehttp : "GET /sign_index3/2/ HTTP/1.1" 200 501
+[2018-09-06 11:15:39,793] [INFO] basehttp : "GET /sign_index3/2/ HTTP/1.1" 200 501
+[2018-09-06 11:21:26,819] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-06 11:21:26,819] [INFO] basehttp : "GET / HTTP/1.1" 200 1471
+[2018-09-06 11:21:35,407] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 302 0
+[2018-09-06 11:21:35,407] [INFO] basehttp : "POST /login_action/ HTTP/1.1" 302 0
+[2018-09-06 11:21:36,359] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:21:36,359] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:21:40,900] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 520
+[2018-09-06 11:21:40,900] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 520
+[2018-09-06 11:21:40,983] [WARNING] basehttp : "GET /sign_index3/1/2.png HTTP/1.1" 404 3680
+[2018-09-06 11:21:40,983] [WARNING] basehttp : "GET /sign_index3/1/2.png HTTP/1.1" 404 3680
+[2018-09-06 11:23:11,661] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:23:11,661] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:23:15,633] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 520
+[2018-09-06 11:23:15,633] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 520
+[2018-09-06 11:23:15,722] [WARNING] basehttp : "GET /sign_index3/1/2.png HTTP/1.1" 404 3680
+[2018-09-06 11:23:15,722] [WARNING] basehttp : "GET /sign_index3/1/2.png HTTP/1.1" 404 3680
+[2018-09-06 11:27:19,488] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:27:19,488] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:27:23,537] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 528
+[2018-09-06 11:27:23,537] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 528
+[2018-09-06 11:27:23,614] [WARNING] basehttp : "GET /static/2.png HTTP/1.1" 404 1639
+[2018-09-06 11:27:23,614] [WARNING] basehttp : "GET /static/2.png HTTP/1.1" 404 1639
+[2018-09-06 11:28:42,803] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:28:42,803] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:28:46,474] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 528
+[2018-09-06 11:28:46,474] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 528
+[2018-09-06 11:28:46,536] [INFO] basehttp : "GET /static/2.png HTTP/1.1" 200 711
+[2018-09-06 11:28:46,536] [INFO] basehttp : "GET /static/2.png HTTP/1.1" 200 711
+[2018-09-06 11:31:54,151] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:31:54,151] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:31:57,728] [ERROR] exception : Internal Server Error: /sign_index3/1/
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\guestsign\sign\views.py", line 148, in sign_index3
+    'eventNanme': event_name,'qrcode':qrcodeWithText('http://118.24.90.64:8014/sign_index/'+str(event_id))})
+  File "D:\guestsign\sign\views.py", line 140, in qrcodeWithText
+    img.save(savePath)
+  File "D:\python\lib\site-packages\qrcode\image\pil.py", line 50, in save
+    self._img.save(stream, format=format, **kwargs)
+  File "D:\python\lib\site-packages\PIL\Image.py", line 1947, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/static/images/2.png'
+[2018-09-06 11:31:57,728] [ERROR] exception : Internal Server Error: /sign_index3/1/
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\guestsign\sign\views.py", line 148, in sign_index3
+    'eventNanme': event_name,'qrcode':qrcodeWithText('http://118.24.90.64:8014/sign_index/'+str(event_id))})
+  File "D:\guestsign\sign\views.py", line 140, in qrcodeWithText
+    img.save(savePath)
+  File "D:\python\lib\site-packages\qrcode\image\pil.py", line 50, in save
+    self._img.save(stream, format=format, **kwargs)
+  File "D:\python\lib\site-packages\PIL\Image.py", line 1947, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/static/images/2.png'
+[2018-09-06 11:31:57,913] [ERROR] basehttp : "GET /sign_index3/1/ HTTP/1.1" 500 79420
+[2018-09-06 11:31:57,913] [ERROR] basehttp : "GET /sign_index3/1/ HTTP/1.1" 500 79420
+[2018-09-06 11:37:34,079] [ERROR] exception : Internal Server Error: /sign_index3/1/
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\guestsign\sign\views.py", line 150, in sign_index3
+    'eventNanme': event_name,'qrcode':qrcodeWithText('http://118.24.90.64:8014/sign_index/'+str(event_id))})
+  File "D:\guestsign\sign\views.py", line 142, in qrcodeWithText
+    img.save(savePath)
+  File "D:\python\lib\site-packages\qrcode\image\pil.py", line 50, in save
+    self._img.save(stream, format=format, **kwargs)
+  File "D:\python\lib\site-packages\PIL\Image.py", line 1947, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/static/images/2.png'
+[2018-09-06 11:37:34,079] [ERROR] exception : Internal Server Error: /sign_index3/1/
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\python\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\guestsign\sign\views.py", line 150, in sign_index3
+    'eventNanme': event_name,'qrcode':qrcodeWithText('http://118.24.90.64:8014/sign_index/'+str(event_id))})
+  File "D:\guestsign\sign\views.py", line 142, in qrcodeWithText
+    img.save(savePath)
+  File "D:\python\lib\site-packages\qrcode\image\pil.py", line 50, in save
+    self._img.save(stream, format=format, **kwargs)
+  File "D:\python\lib\site-packages\PIL\Image.py", line 1947, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/static/images/2.png'
+[2018-09-06 11:37:34,265] [ERROR] basehttp : "GET /sign_index3/1/ HTTP/1.1" 500 79359
+[2018-09-06 11:37:34,265] [ERROR] basehttp : "GET /sign_index3/1/ HTTP/1.1" 500 79359
+[2018-09-06 11:40:06,413] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:40:06,413] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:40:10,333] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 535
+[2018-09-06 11:40:10,333] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 535
+[2018-09-06 11:40:10,392] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 711
+[2018-09-06 11:40:10,392] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 711
+[2018-09-06 11:41:11,231] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:41:11,231] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:41:13,644] [INFO] basehttp : "GET /sign_index3/2/ HTTP/1.1" 200 535
+[2018-09-06 11:41:13,644] [INFO] basehttp : "GET /sign_index3/2/ HTTP/1.1" 200 535
+[2018-09-06 11:41:13,739] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 712
+[2018-09-06 11:41:13,739] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 712
+[2018-09-06 11:42:55,300] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:42:55,300] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:42:57,974] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 550
+[2018-09-06 11:42:57,974] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 550
+[2018-09-06 11:42:58,045] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 711
+[2018-09-06 11:42:58,045] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 711
+[2018-09-06 11:43:03,698] [INFO] basehttp : "GET /sign_index3/2/ HTTP/1.1" 200 550
+[2018-09-06 11:43:03,698] [INFO] basehttp : "GET /sign_index3/2/ HTTP/1.1" 200 550
+[2018-09-06 11:43:03,810] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 712
+[2018-09-06 11:43:03,810] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 712
+[2018-09-06 11:44:54,675] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:44:54,675] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 11:44:57,317] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 550
+[2018-09-06 11:44:57,317] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 550
+[2018-09-06 11:44:57,390] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 711
+[2018-09-06 11:44:57,390] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 711
+[2018-09-06 11:45:02,058] [INFO] basehttp : "GET /sign_index3/2/ HTTP/1.1" 200 550
+[2018-09-06 11:45:02,058] [INFO] basehttp : "GET /sign_index3/2/ HTTP/1.1" 200 550
+[2018-09-06 11:45:02,161] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 712
+[2018-09-06 11:45:02,161] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 712
+[2018-09-06 12:28:04,246] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 12:28:04,246] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 12:28:06,758] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 567
+[2018-09-06 12:28:06,758] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 567
+[2018-09-06 12:28:06,810] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 711
+[2018-09-06 12:28:06,810] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 711
+[2018-09-06 12:29:32,729] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 593
+[2018-09-06 12:29:57,801] [INFO] basehttp : "GET /sign_index3/2/ HTTP/1.1" 200 568
+[2018-09-06 12:30:23,522] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 12:30:23,522] [INFO] basehttp : "GET /event_manage/ HTTP/1.1" 200 4144
+[2018-09-06 12:30:26,007] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 568
+[2018-09-06 12:30:26,007] [INFO] basehttp : "GET /sign_index3/1/ HTTP/1.1" 200 568
+[2018-09-06 12:30:26,052] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 711
+[2018-09-06 12:30:26,052] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 711
+[2018-09-06 12:30:34,485] [INFO] basehttp : "GET /sign_index3/2/ HTTP/1.1" 200 568
+[2018-09-06 12:30:34,485] [INFO] basehttp : "GET /sign_index3/2/ HTTP/1.1" 200 568
+[2018-09-06 12:30:34,624] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 712
+[2018-09-06 12:30:34,624] [INFO] basehttp : "GET /static/images/2.png HTTP/1.1" 200 712
