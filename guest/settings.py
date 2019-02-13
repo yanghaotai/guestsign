@@ -91,7 +91,7 @@ DATABASES = {
         'PORT': '3306',
         'NAME': 'guest_dev',
         'USER': 'root',
-        'PASSWORD': '123456',
+        'PASSWORD': 'root123456',
         'OPTIONS': {
             'isolation_level': None,
             'autocommit': True,
